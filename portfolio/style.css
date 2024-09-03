@@ -1,0 +1,37 @@
+body{
+background-color: rgb(0,0,33);
+color:white;
+}
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins',sans-serif;
+}
+nav{
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    background-color: rgb(18,18,33);
+
+
+}
+ nav ul{
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    margin: 0 23px;
+}
+nav ul li {
+    list-style: none;
+    margin:0 23px;
+    height: 100px;
+}
+.left{
+    font-size:2.5rem;
+}
+.firstsection{
+    display:flex;
+    justify-content: space around;
+    margin:23px 0;
+    width:34px;
+}
