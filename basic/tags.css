@@ -1,4 +1,7 @@
-h2{
-    background-color: blueviolet;
-    text-align: center;
+#p1{
+    color:rgb(255, 0, 34);
+    border: solid 2px violet;
 }
+#p2{color:aquamarine;}
+#p3{color:#abff99;}
+#p4{color:hsla(310, 59%, 39%, 0.663);}
