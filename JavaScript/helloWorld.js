@@ -29,3 +29,20 @@ function sum(num1,num2,num3){
 }
 ans = sum(2,3,4);
 console.log(ans);
+
+// array
+   // creation of array
+   // method 1
+   let arr1 = [1,2,3,4,5,6,78,9]
+console.log(arr1)
+    //method2 by help of constructor
+    let arr2 = new Array(1,2,3,4,5,6,67,7)
+console.log(arr2);
+   
+//objects
+let obj = {
+    name:"shruti",class:12,greet:function(name){
+        console.log("welcome");
+    }
+}
+console.log(typeof(obj))
