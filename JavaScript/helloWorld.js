@@ -46,3 +46,50 @@ let obj = {
     }
 }
 console.log(typeof(obj))
+// call stack 
+function makeTea() {
+    console.log("Chai bana raha hoon");
+}
+
+function boilWater() {
+    console.log("Paani ubal raha hai");
+    makeTea();
+}
+
+function startKitchen() {
+    console.log("Kitchen start karta hoon");
+    boilWater();
+}
+
+startKitchen();
+
+// global scope 
+var age = 17;
+let life=7;
+if(life=7){
+    console.log(age);
+}
+
+// function scope 
+function block(){
+    let age1 = 18;
+    console.log(age1);
+}
+block();
+//console.log(age1);
+
+
+// block scope
+{
+    let age2 = 19;   // if the variable is declared with let then it will not be accessible outside the block same goes with const
+                    // if the variable is declared with var then it will be accessible outside the block as it a global variable
+    console.log(age2);
+}  
+
+
+// variable hoisting
+console.log(naam); // undefined
+var naam = "Rahul";
+
+console.log(naam2); // Error: Cannot access 'naam' before initialization
+let naam2 = "Rahul";
