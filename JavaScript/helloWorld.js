@@ -117,3 +117,8 @@ catch(error){
     console.log("you are inside catch block !!! error was detected ");
     console.log("do smt to get out of here ");
 }
+finally{
+    console.log("mujhe farak nahi padta mai toh chala hi jaunga");  
+}
+// creating custom error by using throw keyword 
+throw "yeh error tuh maine he banaya hai haha !!!";
