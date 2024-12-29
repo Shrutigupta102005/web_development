@@ -91,5 +91,29 @@ block();
 console.log(naam); // undefined
 var naam = "Rahul";
 
-console.log(naam2); // Error: Cannot access 'naam' before initialization
-let naam2 = "Rahul";
+//console.log(naam2); // Error: Cannot access 'naam' before initialization
+//let naam2 = "Rahul";
+
+//object cloning
+
+let shubh = {
+    age: 23,
+    wt:29,
+    name:"shubham"
+}
+console.log(shubh);
+
+
+
+// errorr handling 
+try{
+    console.log("hello");
+    console.log("world");
+    console.log(dhruv);
+    console.log("shruti");
+    console.log("gupta");
+}
+catch(error){
+    console.log("you are inside catch block !!! error was detected ");
+    console.log("do smt to get out of here ");
+}
