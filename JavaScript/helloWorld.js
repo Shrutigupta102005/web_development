@@ -1,7 +1,7 @@
 // variables
 var a = 19;
 let b = 20;
-const c=21;
+const c=21;  // constant variable- value want change 
 console.log(a);
 
 
