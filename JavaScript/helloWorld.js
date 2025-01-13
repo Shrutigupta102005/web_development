@@ -122,3 +122,5 @@ finally{
 }
 // creating custom error by using throw keyword 
 throw "yeh error tuh maine he banaya hai haha !!!";
+
+alert("hello world");
