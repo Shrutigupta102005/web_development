@@ -1,4 +1,4 @@
-/*var a= 10;                          // hoisting
+var a= 10;                          // hoisting 
 console.log(a);                     
 function fun(){                     
     console.log(a);
@@ -13,7 +13,7 @@ function fun(){
 }
 
 foo();
-fun();*/
+fun();
  // there is no  ascii value in js 
 
 //  difference between == and === ?
@@ -21,7 +21,7 @@ console.log(1=="1"); // true   will first perform typeconversion
 console.log([]==0); // true   will first perform typeconversion 
 console.log([]==""); // false   will first perform typeconversion non primitive to primitive
 console.log(0==[]); // true   will first perform typeconversion
-console.log(0=="   ")
+console.log(0=="   ");
 console.log(""=="   ");
 console.log(""=="");   // true string is non primitive 
 console.log([]==[]);     //false differnce address 
@@ -52,4 +52,5 @@ Boolean(1); // true number to boolean
 
 // nan - not a number(not a valid number )
 console.log(1+"a"); //1a
+var a = "shruti"
 console.log(a++);  // nan
