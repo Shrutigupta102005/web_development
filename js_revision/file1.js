@@ -1,5 +1,5 @@
 var a= 10;                          // hoisting 
-console.log(a);                     
+console.log(a);                     // var have functional scope 
 function fun(){                     
     console.log(a);
     var a = 20;
