@@ -8,4 +8,7 @@ var a = 30; // only var a is moved on the top of the scope
 // 2.  creation phase -
 
 //Execution context -
+var fun = function(){
+    console.log("hello");
+}
 
