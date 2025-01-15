@@ -44,3 +44,12 @@ Boolean(1); // true number to boolean
 // pass by value and pass by reference sort the datatype 
 // pass by value - primitive data type
 // pass by reference - non primitive data type
+
+// diff between undefined, not defined  ,NAN ,null and none?
+
+
+
+
+// nan - not a number(not a valid number )
+console.log(1+"a"); //1a
+console.log(a++);  // nan
