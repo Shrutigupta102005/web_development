@@ -1,0 +1,14 @@
+***FORMS***
+- <form action=”” name=”” method=””></form>
+- <button></button> to submit form
+name attribute = to identify value at backend
+
+**TYPES OF METHODS**
+1. get : to fetch data from server side(information lena)
+2. post : to send data to server to store or to change data at server end(info dena)
+get : data visible on (query string)url (stored in query )
+post: data present in the form of form data(payload)
+
+***Action*** :
+task kahan pr perform ho…..
+#—>acting as the reference of the current page
