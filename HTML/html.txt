@@ -1,0 +1,132 @@
+HTML(Hypertext Markup Language)
+        text containing hyperlinks
+        hyperlink: text —> click —> redirect
+
+
+Browser have # types of engines
+1. Layout engine
+- html
+- css
+2. JS engine
+- JS
+3. Search engine  
+
+<!DOCTYPE html> :   latest version of html —> html 5
+<html> </html> : root element
+<head> </head> : contains all the information which we do not want users to see
+<body> </body> : information which user should/can see
+UTF-8 : how characters set is converted to binary in written in this rule
+viewport : the entire white screen of browser 
+title : name on browser tab
+
+
+***TAGS***
+(element/tag)
+1. heading tag : from h1 to h6
+TYPES OF TAGS/ELEMENTS:
+        1. Inline element
+        2. Block element
+INLINE ELEMENT : occupies only the required space
+    ex. span , em , i , strong , sub , sup
+BLOCK ELEMENTS : occupies the entire area even if its not needed 
+    ex. div , p , h1—-h6
+
+div : generic container
+strong tag : strong tag is not used to bold the statement. used for very important stuff (format in bold) like bolte hue impact lata hai 
+<b> </b> : to bold the text
+<em> </em> : to provide emphasis (format in italics)
+<i> </i> : to represent the text in italics
+<br> : break line
+<hr> : horizontal rule
+
+***HTML Entities(escape characters)***
+always start with “&”  and end with “;”
+&copy; for copyright
+&amp; for &
+& hearts; for ❤️
+& equals;  for =
+& times; for x
+& divide;
+html ignores white spaces
+to use space (&nbsp) : no break space
+
+***FOR CODE SNIPPET***
+<code> </code> : block element
+<pre> </pre> : pre formatted (block element)
+
+subscript
+superscript
+
+LISTS
+1. unordered
+2. ordered
+
+ANCHOR TAG:
+- target :  by default “_self”
+- href : hyperlink reference
+
+. —> jahan  ho whi ka dekho
+../ —> ek level upr
+/ —> ek level niche
+… —> this does not exists
+../../ —>2 level upr
+
+https://google.com —> absolute path
+../../folder/file —> relative path
+
+https://www.facebook.com/login/?privacy_mutation_token
+   1                      2                   3 
+
+1 —> protocol
+2—>resource
+3—>query
+
+
+# MEDIA ELEMENT
+- IT IS USED TO ADD IMAGES , VIDEOS , AUDIO TO THE WEB PAGES
+
+### IMAGE
+ <img src=”” alt=”” width=”” height=””>
+
+- src —> image path (absolute or relative)
+- alt is used to define the image in case image dose not load or url is wrong
+- but we should not give height and width together as sometimes image can brust or image will not look better
+
+### AUDIO
+<audio src=”” controls>
+BOOLEAN ATTRIBUTES:
+- control attribute to see the audio control options
+- by loop audio will play continuously
+- by autoplay attribute audio will start automatically when we open webpage
+- by muted video will start muted
+
+### VIDEO
+ <video  src=”” controls width=”” height=””>
+- control attribute to see the audio control options
+- loop option by which audio will play continuously
+- by autoplay attribute audio will start automatically when we open webpage
+- by muted video will start muted
+
+
+## iframe tag
+- used to play videos from youtube to our webpage
+- we an only play videos which permits iframe / permit that other can use their data
+- we can also embed html page within a html page
+- it can also embed websites (but website should allow permit example codingblocks permit but Youtube does not)
+
+# ANCHOR TAG
+### ABOUT TARGET ATTRIBUTE
+- _self —→ within page
+- _blank —→ in a new page
+- _parent —>in parent html page when we embed multiple html page WITHIN A HTML PAGE USING iframe attribute
+- _top —→ in topt html page when we embed multiple html page WITHIN A HTML PAGE USING iframe attribute
+
+
+# HTML SEMENTICS
+- "purpose or role does that HTML element have”
+- uses of tag according to demand
+- navlink —→ navigate to other page. It is useful for highlighting active menu items in a navigation bar or header of page
+- section tag is used to show image (data) which do not repeat
+- article tag is used to show image (data) which repeat
+- it is good programming practice to use html semantic
+- html semantic also helps in making websites SEO better or easy to understand for web crawler
