@@ -1,0 +1,29 @@
+***TABLES***
+    1. thead
+    2. tbody
+    3. tfoot
+
+th - bolded, centrally aligned
+td - normal, start/align from the beginning
+
+- cell spacing —→ used to give space between cells
+- cell padding —→ used to give space within cells
+
+DEPRICATED/OUTDATED
+
+- border attribute —> used to give border
+- centre —→ to move table to centre
+- bgcolor —→ to give color to table
+
+html
+<table border="2" cellspacing="10" cellpadding="10" bgcolor="green+red+blue+red" align="center">
+
+- COLSPAN IS USED TO ADD COLUMN
+
+html
+<td colspan="2">CHEM</td>
+
+- ROWSPAN IS USED TO ADD ROWS
+
+html
+<td rowspan="3">MATHS</td>
