@@ -1,0 +1,47 @@
+# Box-Model
+It treats every element as a rectangular box
+
+## Properties of Box-model
+
+1. Dimension(Width and height)
+2. Border:
+css
+border: 3px solid red;
+border-top: 5px dashed cyan;
+border-left: 2px dotted lime;
+
+ 3. Margin: Space between 2 elements
+it accepts shorthand and longhand property, so we can give different values at once
+css
+margin: 30px 40px 50px 100px;
+margin: 100px;
+margin-bottom: 20px;
+margin-right: 23px;
+
+4. Padding: Space b/w border and element’s content
+same as margin
+css
+padding: 50px;
+padding: 100px;
+padding-bottom: 20px;
+padding-right: 23px;
+
+If we give
+css
+margin: 50px 70px;
+50 → top and bottom
+70 → right and left
+
+---
+
+css
+margin: 50px 70px 90px;
+50 → Top
+70 → Right and Left
+90 → Bottom
+
+---
+
+**All of this was only for block elements**
+
+---
