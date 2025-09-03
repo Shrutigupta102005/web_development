@@ -1,0 +1,29 @@
+web --> information system made by collection of webpages and websites which can be accesed using internet 
+website--> static stuff 
+            ex. govt websites , wikipedia
+webapplication --> dynamic stuff 
+            ex. instagram  , facebook
+webpages --> single page of information
+website --> collection of webpages 
+
+Internet --> global network of interconnected computer ,which communicate using TCP/IP protocol
+
+TCP/IP PROTOCOL- to work with internet ,we need to follow some set of rules/techniques by standard organisation.
+     http(hypertext transfer protocol) :    security 
+     IP(internet protocol)
+     TCP(transmission control protocol)
+
+ISP(internet service provider): jio , vodafone, airtel
+—>amount charge — for maintenance 
+—>cables under the sea
+
+client-anyone who has requested for the data
+server- anything which analysis request and reverts back with the best possible solution.
+dns(domain name system)
+datecentres-huge amt of data is stored
+
+**TYPES OF WEBSITES/WEBAPPLICATIONS**
+1. static -->jo kewal data show krta h
+2. dynamic --> interactivity
+3. responsive lmost similar content on laptop and mobiles ,the way data is adjusted —> screen dependent
+
