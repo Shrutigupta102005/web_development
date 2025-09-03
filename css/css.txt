@@ -1,0 +1,921 @@
+# CSS ( CASCADING STYLE SHEETS)
+- CSS is the language we use to style an HTML document.
+- CSS describes how HTML elements should be displayed.
+- in this we use style attribute or tag to designed html document.
+ 
+
+we can use CSS in three ways.
+- INLINE CSS
+     WE APPLY STYLE ATTRIBUTE WITHIN LINE
+    html
+    <h1 style="color: red;  border: 2px solid black;"  >let's learn the jaan leva tarika</h1>
+    <p style="background-color: blue; color: rgb(134, 31, 31);">let's know how to do inline</p>
+    
+- INTERNAL CSS
+    WE APPLY STYLE TAG WITHIN BODY TAG OF HTML CODE AND WHERE WE CAN MAKES DESIGN ACCORDING TO OUR NEED
+    HERE WE WRITE NAME OF TAG IN WHICH WE WANT TO MAKE CHANGES AND APPLY CHANGES
+    IN THIS WE DO NOT HAVE TO DO MORE WORK(EXTRA WORK LIKE OF INLINE)
+    SEPERAATIO OF CONCERN (SEO) IS GOOD IN INTERNAL CSS
+    
+- EXTERNAL CSS
+    IN THIS WE MAKE SEPERATE FILE OF CSS AND THEN CONNECT BOTH HTML AND CSS FILE BY USING *LINK TAG* IN HEAD PART OF HTML FILE
+    LINK IS THE MOST IMP PART
+    
+    ### *SPECIFICITY*
+    If there are two or more CSS rules that point to the same element, the selector with the highest specificity will "win", and its style declaration will be applied to that HTML element.
+    INLINE > INTERNAL > EXTERNAL
+    
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    h1{
+    color: aqua;
+    }
+    </style>
+    </head>
+    <body>
+    <h1 style="color: blue;">ab maja aayega</h1>
+    <h2 style="color: aquamarine;">aaj bahu solve kar</h2>
+    
+    ---
+    
+    IN CSS FILE
+    h1{
+    color: brown;
+    }
+
+
+    ---
+
+# POSITIONS
+
+- Static
+     static (default)
+    - Behavior : The default position for all elements.
+    - Flow : Follows the normal document flow.
+    - Top/left/right/bottom : Ignored.
+    Example :
+     .element { position: static; }
+    
+- Relative
+     relative
+    - Behavior : Positioned relative to its normal position.
+    - Flow : Still takes up space in the document flow.
+    - Top/left/right/bottom : Move the element relative to itself.
+    Example :
+    .element {   position: relative;   top: 10px; /* moves down /   left: 20px; / moves right */   }
+    
+- Absolute ***
+    absolute
+    - Behavior: Positioned *relative to the nearest positioned ancestor (i.e., one that is not static). If none exists, it uses the <html> (viewport).
+    - Flow: *Removed from the document flow — doesn't affect surrounding elements.
+    - Top/left/right/bottom: Move the element relative to the ancestor.
+    Example :
+    .parent { position: relative; }
+    .child { position: absolute; top: 0; left: 0; }
+    
+- Fixed
+     fixed
+    - Behavior: Positioned relative to the *viewport (browser window).
+    - Flow: Removed from normal flow.
+    - Does not move when scrolling the page.
+    Example :
+    .element { position: fixed; top: 0; right: 0; }
+    
+- Sticky
+     sticky
+    - Behavior: Acts like relative until it hits a threshold (e.g., top: 0), then becomes fixed.
+    - Useful for: Sticky headers or navbars.
+    - Requires: A scrollable container with defined height (like body).
+    Example :
+    .element { position: sticky; top: 0; }
+    
+
+| Position | Part of Flow? | Offset From | Scrolls With Page? |
+| ---      | ---           | ---         | ---                |
+| static   | ✅ Yes        | N/A         | ✅ Yes            |
+| relative | ✅ Yes        | Its normal position | ✅ Yes    |
+| absolute | ❌ No         | Nearest positioned ancestor ( most recent positioned parent ) | ❌ No |
+| fixed    | ❌ No         | Viewport ( with respect to body , after giving offset it will remain fixed ) | ❌ No |
+| sticky   | ✅ Yes then no| Scroll container/viewport | Depends (sticky) |
+
+---
+
+## FONT-PROPERTIES
+
+## Basic Font Properties
+
+| Property | Description | Example |
+| ---      | ---         | --- |
+| font-family | Specifies the typeface | font-family: Arial, sans-serif; |
+| font-size | Sets the size of the font | font-size: 16px; |
+| font-weight | Sets how bold the text is | font-weight: bold; |
+| font-style | Sets italic or normal text | font-style: italic; |
+| font-variant | Small caps or normal | font-variant: small-caps; |
+| line-height | Sets spacing between lines | line-height: 1.5; |
+| letter-spacing | Space between letters | letter-spacing: 2px; |
+| word-spacing | Space between words | word-spacing: 5px; |
+| text-transform | Capitalization style | text-transform: uppercase; |
+
+ font Shorthand Property
+The font shorthand sets multiple font properties in one line, in this order:
+css
+font: [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];
+ Example:
+css
+font: italic small-caps bold 16px/1.5 "Helvetica", sans-serif;
+
+
+## Font Families
+    Two types:
+        1. Specific fonts – like "Times New Roman", "Roboto"
+        2. Generic families – used as fallback
+
+| Generic Family | Description |
+| ---            | ---         |
+| serif          | With small strokes (e.g., Times) |
+| sans-serif     | Clean, no strokes (e.g., Arial) |
+| monospace      | Fixed-width characters |
+| cursive        | Handwriting-style |
+| fantasy        | Decorative, playful |
+
+### Example:
+css
+font-family: "Georgia", serif;
+
+---
+
+## Font Sizes Units
+
+| Unit | Description | Example |
+| ---  | ---         | ---     |
+| px   | Pixels (fixed size)   | font-size: 16px; |
+| em   | Relative to parent font | 1em = 100% |
+| rem  | Relative to root font | 1rem = 100% |
+| %    | Percentage of parent  | font-size: 120%; |
+
+## Example CSS Block
+css
+p {
+font-family: "Open Sans", sans-serif;
+font-size: 1.2rem;
+font-weight: lighter;
+font-style: italic;
+line-height: 1.6;
+letter-spacing: 0.5px;
+}
+
+---
+
+## TEXT SHADOW
+The text-shadow property adds shadow effects to text. You can apply multiple shadows, control their direction, blur, and color.
+Same for BOX-SHASDOW
+
+## Syntax
+css
+text-shadow:horizontal-offset(x)vertical-offset(y)blur-radius(sharpness)color(#rgba);
+
+### Example:
+css
+text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+
+| Value | Description |
+| ---   | ---         |
+| horizontal-offset | How far to move shadow left/right |
+| vertical-offset | How far to move shadow up/down |
+| blur-radius | How much to blur the shadow (optional) |
+| color | Shadow color (can use #rgba, hex, etc.) |
+
+---
+
+## LIST PROPERTIES
+In CSS, list properties are used to style HTML lists (<ul>, <ol>, and <li> elements). These control things like bullet type, positioning, and appearance.
+## Core CSS List Properties
+### 1. list-style-type
+- Sets the type of marker (bullet or number style).
+- Applies to <ul> or <ol> items.
+css
+ul {
+list-style-type: square;
+}
+Common Values:
+
+| Value | Description |
+| ---   | --- |
+| disc | Solid circle (default for <ul>) |
+| circle | Hollow circle |
+| square | Solid square |
+| decimal | Numbers (default for <ol>) |
+| lower-roman | i, ii, iii |
+| upper-alpha | A, B, C |
+| none | No bullets |
+
+---
+
+### 2. list-style-position
+- Specifies where the bullet appears in relation to the text.
+css
+ul {
+list-style-position: inside;
+}
+| Value | Description |
+| --- | --- |
+| outside | Default. Bullet is outside the text block. |
+| inside | Bullet is inside the text block. |
+---
+
+### 3. list-style-image
+- Replaces the bullet with a custom image.
+css
+ul {
+list-style-image: url('bullet.png');
+}
+If the image fails to load, the browser falls back to list-style-type.
+---
+### 4. list-style (Shorthand)
+- Combines the above three into a single property.
+css
+ul {
+list-style: square inside url('bullet.png');
+}
+The order is flexible, but generally:
+css
+list-style: [type] [position] [image];
+example:
+
+html
+<ul style="list-style-type: square; list-style-position: inside;">
+<li>Milk</li>
+<li>Bread</li>
+<li>Cheese</li>
+</ul>
+
+---
+
+---
+
+---
+
+## OTHER PROPERTIES
+
+### OVERFLOW
+
+In CSS, the overflow property controls what happens when content overflows the boundaries of its container (e.g., a div with a fixed width or height).
+
+### Syntax
+
+css
+selector {
+overflow: value;
+}
+
+### Values of overflow
+
+| Value | Description |
+| --- | --- |
+| visible | Default. Content is not clipped. It renders outside the element's box. |
+| hidden | Content is clipped and not accessible. No scrollbars. |
+| scroll | Content is clipped, but scrollbars are always shown (even if not needed). |
+| auto | Scrollbars are shown only when needed (if content overflows). |
+| clip | Similar to hidden, but cannot be scrolled even programmatically. |
+
+### Overflow on Axes
+
+You can also control overflow separately on horizontal and vertical axes:
+
+css
+overflow-x: auto;
+overflow-y: hidden;
+
+### TEXT-OVERFLOW
+
+## Summary Table
+
+| Feature | Works On | Description |
+| --- | --- | --- |
+| text-overflow: clip | Single-line | Cuts off with no indicator |
+| text-overflow: ellipsis | Single-line | Adds ... when overflowed |
+| -webkit-line-clamp | Multi-line | Truncates after N lines + ellipsis |
+| fade-out trick | Single-line | Visually fades out instead of clipping |
+
+## text-overflow Property in CSS
+
+The text-overflow property defines how overflowing inline content (like text) is signaled to the user when it overflows a container.
+
+### Syntax
+
+css
+selector {
+text-overflow: ellipsis | clip;
+}
+
+---
+
+## 1.  text-overflow: ellipsis
+
+Shows an ellipsis (...) when the text overflows the container.
+
+### 🔧 Required CSS Setup:
+
+You must combine it with:
+
+css
+white-space: nowrap;
+overflow: hidden;
+
+### Example:
+
+css
+.ellipsis {
+width: 200px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+html
+<div class="ellipsis">
+This is a long line of text that will not fit in the box.
+</div>
+
+Result:
+
+This is a long line...
+
+---
+
+## 2. text-overflow: clip
+
+This is the default value. It simply cuts off the text without any visual cue (like ellipsis).
+
+### Example:
+
+css
+.clip {
+width: 200px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: clip;
+}
+
+html
+<div class="clip">
+This is a long line of text that will not fit in the box.
+</div>
+
+Result:
+
+This is a long line o
+
+---
+
+## Important Notes
+
+- These only work on single-line text unless using special multi-line techniques (like webkit-line-clamp).
+- You must apply a fixed width or max-width to see the effect.
+
+## Related Properties
+
+### 1. white-space
+
+Controls how text wraps or stays on one line.
+
+- nowrap – No line breaks, useful for truncation
+- normal – Allows wrapping
+- pre, pre-wrap, pre-line – For preserving whitespace or custom formatting
+
+### 2. overflow
+
+Controls content that exceeds the box.
+
+- hidden – Required for truncation
+- visible, scroll, auto – Won't work with text-overflow
+- 
+
+***Advanced Technique: Multi-Line Ellipsis***
+
+If you want to truncate after multiple lines, use this (WebKit browsers):
+
+---
+
+css
+.multiline-ellipsis {
+display: -webkit-box;
+-webkit-line-clamp: 2; /* number of lines to show */
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+
+🔹 Result: Shows 2 lines of text with an ellipsis on overflow.
+
+---
+
+## Experimental: Custom Truncation Effects (Optional)
+
+While not official text-overflow values, you can fake custom overflow behaviors:
+
+### Fade Out Text Overflow
+
+css
+.fade-out {
+position: relative;
+max-width: 200px;
+white-space: nowrap;
+overflow: hidden;
+}
+
+.fade-out::after {
+content: '';
+position: absolute;
+right: 0;
+width: 40px;
+height: 100%;
+background: linear-gradient(to right, transparent, white);
+}
+
+This makes text appear to fade out at the end instead of abruptly clipping or using an ellipsis.
+
+---
+
+### WIDTH
+
+### width, min-width, and max-width in CSS
+
+### width
+
+Sets the exact width of an element.
+
+css
+.element {
+width: 300px;
+}
+
+- If content overflows, it may overflow the box (unless constrained with overflow)
+- Does not adapt unless used with %, vw, etc.
+
+---
+
+### min-width
+
+Sets the minimum width the element can shrink to.
+
+css
+.element {
+min-width: 200px;
+}
+
+- Prevents the element from becoming smaller than 200px, even in smaller screens
+- Useful to protect important content (like buttons or labels) from getting squished
+
+---
+
+### max-width
+
+Sets the maximum width the element can grow to.
+
+css
+.element {
+max-width: 600px;
+}
+
+- Prevents the element from stretching too wide, especially in large viewports
+- Common in responsive containers or readable text blocks
+
+---
+
+## Combining Them
+
+You can combine all three to make a flexible but bounded layout:
+
+css
+.responsive-box {
+width: 100%;
+min-width: 300px;
+max-width: 800px;
+}
+
+This means:
+
+- Tries to take up 100% of the parent’s width
+- Won’t shrink below 300px
+- Won’t grow beyond 800px
+
+---
+
+## Summary Table
+
+| Property | Description |
+| --- | --- |
+| width | The actual width (can be fixed or relative) |
+| min-width | Prevents it from getting too narrow |
+| max-width | Prevents it from getting too wide |
+
+---
+
+## Real Example: Responsive Card
+
+css
+.card {
+width: 100%;
+min-width: 280px;
+max-width: 500px;
+margin: 0 auto;
+}
+
+This makes the .card element responsive, centered, and constrained within 280px–500px.
+
+### FLOAT & CLEAR
+
+### CSS float and clear
+
+### 1. float
+
+The float property is used to position elements to the left or right of their container, letting text or inline content wrap around them.
+
+### Syntax:
+
+css
+.element {
+float: left | right | none | inline-start | inline-end;
+}
+
+This will make the image "float" to the left, and the paragraph text will wrap around it.
+
+---
+
+### 2. clear
+
+The clear property is used to stop elements from wrapping around floated elements. It’s useful when you want an element to appear **after the floats, not beside them.
+
+### Syntax:
+
+css
+.element {
+clear: left | right | both | none;
+}
+
+### Example:
+
+html
+<div class="box float-left">Box 1</div>
+<div class="box float-left">Box 2</div>
+<div class="clear-fix">I'm below the floats</div>
+
+<style>
+.float-left {
+float: left;
+width: 100px;
+height: 100px;
+background: lightblue;
+margin-right: 10px;
+}
+
+.clear-fix {
+clear: both;
+background: lightcoral;
+}
+</style>
+
+The clear: both; ensures that the third box comes below the floated boxes, not beside them.
+
+---
+
+## Common Pattern: Float + Clearfix
+
+When you float child elements, their parent might collapse (because floats are taken out of normal flow). Use a " #clearfix " to fix that.
+
+### Clearfix Example:
+
+css
+.clearfix::after {
+content: "";
+display: table;
+clear: both;
+}
+
+Apply it to the parent:
+
+html
+<div class="container clearfix">
+<div class="float-left">Box 1</div>
+<div class="float-right">Box 2</div>
+</div>
+
+---
+
+## Summary Table
+
+| Property | Use When... | Values |
+| --- | --- | --- |
+| float | You want elements to align left/right and wrap | left, right, none |
+| clear | You want to prevent elements from wrapping | left, right, both |
+
+---
+
+## Modern Alternative
+
+In modern layouts, prefer Flexbox or Grid over floats for layout control. Floats are now mostly used for text wrap (like around images), not full layouts.
+
+### BACKGROUND PROPERTIES
+
+### CSS Background Image & Properties
+
+### 1. background-image
+
+Used to set an image as the background of an element.
+
+### Syntax:
+
+css
+.element {
+background-image: url("image.jpg");
+}
+
+You can also use gradients:
+
+css
+background-image: linear-gradient(to right, red, blue);
+
+---
+
+## 2. Full List of Background Properties
+
+| Property | Description |
+| --- | --- |
+| background-image | Sets the background image |
+| background-color | Sets a fallback background color |
+| background-repeat | Controls if/how the image repeats |
+| background-size | Controls the size of the background image |
+| background-position | Sets where the image is placed inside the element |
+| background-attachment | Controls scroll behavior (fixed or scrolling) |
+| background-clip | Defines the area where background is painted |
+| background-origin | Sets the origin point for image positioning |
+| background | Shorthand for all background properties |
+
+---
+
+---
+
+## Shorthand: background
+
+All of these properties can be combined in one line:
+
+css
+.element {
+background: url("bg.jpg") no-repeat center/cover fixed;
+}
+
+This sets:
+
+- background-image
+- background-repeat
+- background-position
+- background-size
+- background-attachment
+
+---
+
+## Example: Full Background Setup
+
+css
+.full-background {
+background-image: url("hero.jpg");
+background-color: #ccc;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+---
+
+## Responsive Tip
+
+Use background-size: cover to make images fill the screen nicely:
+
+css
+.hero {
+height: 100vh;
+background: url("hero.jpg") no-repeat center/cover;
+}
+
+### IMAGE PROPERTIES
+
+### Object Fit and Position (for responsive or background-style image control)
+
+- object-fit: Defines how the image fits into its container.
+    
+    css
+    img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    }
+    
+- object-position: Positions the image inside its box.
+    
+    css
+    img {
+    object-position: top left;
+    }
+    
+
+---
+
+### Opacity and Filters
+
+- opacity: Sets transparency level.
+    
+    css
+    img {
+    opacity: 0.5;
+    }
+    
+- filter: Applies effects like grayscale, blur, etc.
+    
+    css
+    img {
+    filter: grayscale(100%);
+    }Box Shadow
+    
+
+---
+
+- box-shadow: Adds shadow around the image.
+    
+    css
+    img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+
+---
+
+
+## *Some other tags:*
+
+### *1 - white-space - it is used to define whether the content is to be wrapped or not. Major attributes - wrap and nowrap.*
+
+### *2 - overflow - it gives a scroller so that the user can view the long content in a single line without moving the viewport. Major attributes - scroll , hidden.*
+
+css
+p{
+white-space: nowrap;
+/* overflow: hidden; */
+overflow: scroll;
+}
+
+### *3 - text-overflow - if we want to make a … type ending i.e. not showing the full text. Major attributes - ellipsis , clip.*
+
+css
+p{
+white-space: nowrap;
+/* overflow: hidden; */
+overflow: scroll;
+text-overflow: ellipsis;
+/* text-overflow: clip; */
+}
+
+### *Now if we want to do that the scroll bar will com only when we hover on the text , then we have to use p:hover in css..Code is as follows -*
+
+css
+p{
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+p:hover {
+overflow: scroll;
+text-overflow: clip;
+}
+
+## *MAX WIDTH AND MIN WIDTH*
+
+### *Max-width is used to adjust the text or the element as per the viewport. It will automatically adjust itself once the max-width value is reached.*
+
+### *Min-width is used to adjust the text once the min-value is reached.*
+
+css
+div{
+background-color: red;
+/* width: 1000px; */
+max-width: 1000px;
+min-width: 320px;
+}
+
+### Float is used to lift the element a level above while not leaving the previous space. It helps to wrap text around the image.
+
+css
+img{
+width: 300px;
+float: left;
+}
+
+### Clear is used to clean the float space.
+
+css
+img{
+width: 300px;
+float: left;
+}
+p:nth-of-type(2),:nth-of-type(3){
+clear: left;
+}
+
+## OTHER PROPERTIES
+
+OVERFLOW:
+
+p{
+
+white-space : nowrap;
+
+//overflow: hidden;    
+
+overflow :scroll;
+
+text-overflow : ellipsis;
+
+}
+
+p{
+
+white-space : nowrap;
+
+overflow: hidden;
+
+text-overflow : ellipsis;
+
+hover:     
+
+## *Some other tags*
+
+### *1 - white-space - it is used to define whether the content is to be wrapped or not. Major attributes - wrap and nowrap.*
+
+### *2 - overflow - it gives a scroller so that the user can view the long content in a single line without moving the viewport. Major attributes - scroll , hidden.*
+
+css
+p{
+white-space: nowrap;
+/* overflow: hidden; */
+overflow: scroll;
+}
+
+### *3 - text-overflow - if we want to make a … type ending i.e. not showing the full text. Major attributes - ellipsis , clip.*
+
+css
+p{
+white-space: nowrap;
+/* overflow: hidden; */
+overflow: scroll;
+text-overflow: ellipsis;
+/* text-overflow: clip; */
+}
+
+### *Now if we want to do that the scroll bar will com only when we hover on the text , then we have to use p:hover in css..Code is as follows -*
+
+css
+p{
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+p:hover {
+overflow: scroll;
+text-overflow: clip;
+}
+
+## *MAX WIDTH AND MIN WIDTH*
+
+### *Max-width is used to adjust the text or the element as per the viewport. It will automatically adjust itself once the max-width value is reached.*
+
+### *Min-width is used to adjust the text once the min-value is reached.*
+
+css
+div{
+background-color: red;
+/* width: 1000px; */
+max-width: 1000px;
+min-width: 320px;
+}
+
+### Float is used to lift the element a level above while not leaving the previous space. It helps to wrap text around the image.
+
+css
+img{
+width: 300px;
+float: left;
+}
+
+### Clear is used to clean the float space.
+
+css
+img{
+width: 300px;
+float: left;
+}
+p:nth-of-type(2),:nth-of-type(3){
+clear: left;
+}
