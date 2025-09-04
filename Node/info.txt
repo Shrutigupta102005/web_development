@@ -1,0 +1,12 @@
+commands 
+
+node -v 
+node --> open to the REPL of node 
+
+to run js file --> go to  specific directory
+                 node app.js 
+
+in REPL of node --> proccess
+                    process.argv --> return array of the path where node is opened .
+
+                    
